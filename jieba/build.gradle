@@ -1,0 +1,16 @@
+apply plugin: 'java'
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+
+
+    jar {
+        from('src/main/java/com/analysis') {
+            include 'resources/*.txt'
+        }
+    }
+
+
+        sourceCompatibility = 1.7
+    targetCompatibility = 1.7
+}
